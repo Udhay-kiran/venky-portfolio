@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#22D3EE" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#14B8A6" stop-opacity=".1"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="800" rx="26" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="180" fill="#22D3EE" fill-opacity=".12" filter="url(#blur)"/>
+  <circle cx="190" cy="700" r="210" fill="#14B8A6" fill-opacity=".10" filter="url(#blur)"/>
+
+  <rect x="26" y="26" width="1228" height="748" rx="20" fill="#0B1220" stroke="#1F2937"/>
+  <rect x="26" y="26" width="1228" height="56" rx="20" fill="#0F172A"/>
+  <rect x="26" y="62" width="1228" height="20" fill="#0F172A"/>
+  <circle cx="58" cy="54" r="8" fill="#FB7185" fill-opacity=".8"/>
+  <circle cx="84" cy="54" r="8" fill="#FBBF24" fill-opacity=".8"/>
+  <circle cx="110" cy="54" r="8" fill="#4ADE80" fill-opacity=".8"/>
+  <rect x="156" y="42" width="280" height="24" rx="12" fill="#111827" stroke="#1F2937"/>
+  <text x="174" y="58" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">anilog / dashboard / insights</text>
+
+  <rect x="54" y="112" width="238" height="634" rx="14" fill="#0A0F1C" stroke="#1F2937"/>
+  <text x="78" y="150" fill="#99F6E4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">ANILOG</text>
+  <g fill="#9CA3AF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+    <text x="78" y="200">overview.tsx</text>
+    <text x="78" y="232">sessions.tsx</text>
+    <text x="78" y="264">retention.tsx</text>
+    <text x="78" y="296">cohorts.tsx</text>
+    <text x="78" y="328">settings.tsx</text>
+  </g>
+  <rect x="68" y="214" width="206" height="30" rx="8" fill="url(#teal)" stroke="#155E75"/>
+
+  <rect x="322" y="112" width="904" height="210" rx="14" fill="#0A0F1C" stroke="#1F2937"/>
+  <text x="350" y="148" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="20" font-weight="600">Usage Trends</text>
+  <text x="350" y="176" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="13">Session quality, drop-off, and engagement by feature.</text>
+  <polyline points="352,274 456,242 560,252 664,198 768,218 872,176 976,186 1080,148 1184,166" stroke="#14B8A6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="352,286 456,276 560,258 664,246 768,232 872,226 976,214 1080,208 1184,194" stroke="#67E8F9" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#14B8A6">
+    <circle cx="664" cy="198" r="4"/>
+    <circle cx="872" cy="176" r="4"/>
+    <circle cx="1080" cy="148" r="4"/>
+  </g>
+
+  <rect x="322" y="344" width="436" height="190" rx="14" fill="#0A0F1C" stroke="#1F2937"/>
+  <text x="350" y="378" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="18" font-weight="600">Top Flows</text>
+  <rect x="350" y="400" width="380" height="18" rx="9" fill="#111827"/>
+  <rect x="350" y="436" width="312" height="12" rx="6" fill="#14B8A6" fill-opacity=".45"/>
+  <rect x="350" y="462" width="270" height="12" rx="6" fill="#14B8A6" fill-opacity=".35"/>
+  <rect x="350" y="488" width="228" height="12" rx="6" fill="#14B8A6" fill-opacity=".28"/>
+  <text x="352" y="447" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Search → Details → Save</text>
+  <text x="352" y="473" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Home → Explore → Playlist</text>
+  <text x="352" y="499" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Feed → Item → Share</text>
+
+  <rect x="790" y="344" width="436" height="190" rx="14" fill="#0A0F1C" stroke="#1F2937"/>
+  <text x="818" y="378" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="18" font-weight="600">Session Health</text>
+  <g>
+    <rect x="818" y="410" width="120" height="96" rx="12" fill="#111827" stroke="#1F2937"/>
+    <text x="842" y="438" fill="#9CA3AF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Avg Time</text>
+    <text x="844" y="472" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">8m 42s</text>
+  </g>
+  <g>
+    <rect x="954" y="410" width="120" height="96" rx="12" fill="#111827" stroke="#1F2937"/>
+    <text x="981" y="438" fill="#9CA3AF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Retention</text>
+    <text x="989" y="472" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">71%</text>
+  </g>
+  <g>
+    <rect x="1090" y="410" width="108" height="96" rx="12" fill="#111827" stroke="#1F2937"/>
+    <text x="1114" y="438" fill="#9CA3AF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Errors</text>
+    <text x="1128" y="472" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">0.4%</text>
+  </g>
+
+  <rect x="322" y="556" width="904" height="190" rx="14" fill="#0A0F1C" stroke="#1F2937"/>
+  <text x="350" y="592" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui" font-size="18" font-weight="600">Recent UX Research Notes</text>
+  <g fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">
+    <text x="350" y="626">const findings = synthesize(interviews, sessionReplays);</text>
+    <text x="350" y="652">prioritize(friction.points).by([impact, confidence, effort]);</text>
+    <text x="350" y="678">ship(iteration).measure('completion-rate');</text>
+  </g>
+</svg>
