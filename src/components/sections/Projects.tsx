@@ -45,7 +45,7 @@ function ThumbnailActions({ links }: { links: ProjectLinks }) {
   if (!links.github && !openHref) return null;
 
   return (
-    <div className="pointer-events-none absolute inset-x-3 bottom-3 flex items-center justify-end gap-2 opacity-0 transition duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+    <div className="pointer-events-none absolute inset-x-3 bottom-3 flex items-center justify-end gap-2 opacity-100 transition duration-200 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
       {links.github && (
         <a
           href={links.github}

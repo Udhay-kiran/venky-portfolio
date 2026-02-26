@@ -35,7 +35,7 @@ const highlights: Highlight[] = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-14 md:py-[4.5rem]">
+    <section id="about" className="pt-6 pb-14 md:pt-6 md:pb-[4.5rem]">
       <SectionReveal className="mx-auto max-w-5xl">
         <SectionHeading
           title="About"

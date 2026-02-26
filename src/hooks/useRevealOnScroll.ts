@@ -21,7 +21,7 @@ export default function useRevealOnScroll() {
       return;
     }
 
-    // Replay reveals on every reload/navigation by resetting to hidden first.
+    // Reset reveal state so sections animate again after route changes.
     nodes.forEach((node) => node.classList.remove("is-inview"));
 
     const isInViewport = (node: HTMLElement) => {
@@ -37,17 +37,17 @@ export default function useRevealOnScroll() {
 
     const startObserver = () => {
       observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          entry.target.classList.add("is-inview");
-          observer?.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -10% 0px",
-      },
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add("is-inview");
+            observer?.unobserve(entry.target);
+          }
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -10% 0px",
+        },
       );
 
       nodes.forEach((node) => {
@@ -64,6 +64,7 @@ export default function useRevealOnScroll() {
       });
     };
 
+    // Wait two paint frames so layout and transition styles are fully applied.
     raf1 = window.requestAnimationFrame(() => {
       raf2 = window.requestAnimationFrame(() => {
         startObserver();

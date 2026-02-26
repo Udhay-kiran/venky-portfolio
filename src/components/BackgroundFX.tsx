@@ -1,13 +1,11 @@
 export default function BackgroundFX() {
   return (
     <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-      {/* Base */}
+      {/* Base tone and broad color wash. */}
       <div className="absolute inset-0 bg-zinc-950" />
-
-      {/* Blue haze wash */}
       <div className="absolute inset-0 opacity-85 bg-gradient-to-br from-slate-950 via-zinc-950 to-indigo-950/75" />
 
-      {/* Blueprint grid (big) */}
+      {/* Layered grids and speckle texture to keep the background from feeling flat. */}
       <div
         className="
           absolute inset-0 opacity-[0.16]
@@ -16,7 +14,6 @@ export default function BackgroundFX() {
         "
       />
 
-      {/* Micro grid */}
       <div
         className="
           absolute inset-0 opacity-[0.08]
@@ -25,7 +22,6 @@ export default function BackgroundFX() {
         "
       />
 
-      {/* Dust / specks */}
       <div
         className="
           absolute inset-0 opacity-[0.14]
@@ -42,15 +38,13 @@ export default function BackgroundFX() {
         "
       />
 
-      {/* Light streaks */}
+      {/* Directional light accents and final vignette for depth. */}
       <div className="absolute left-[52%] top-[24%] h-px w-[520px] bg-cyan-300/25 blur-[1px]" />
       <div className="absolute left-[70%] top-[40%] h-px w-[460px] bg-cyan-300/18 blur-[1px]" />
 
-      {/* Right-edge glow */}
       <div className="absolute right-[-140px] top-[60%] h-[620px] w-[620px] -translate-y-1/2 rounded-full bg-cyan-500/18 blur-3xl" />
       <div className="absolute -top-40 -left-40 h-[640px] w-[640px] rounded-full bg-indigo-500/16 blur-3xl" />
 
-      {/* Scanlines */}
       <div
         className="
           absolute inset-0 opacity-[0.06] mix-blend-overlay
@@ -59,7 +53,6 @@ export default function BackgroundFX() {
         "
       />
 
-      {/* Vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_38%,rgba(0,0,0,0.92))]" />
     </div>
   );

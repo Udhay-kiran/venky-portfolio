@@ -122,7 +122,7 @@ export default function Skills() {
         })}
       </div>
 
-      {/* Collapsed extra category */}
+      {/* Keep secondary hardware skills collapsed so the primary grid stays scannable. */}
       <div className="mt-6" data-reveal="up">
         <details className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-5">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-3">

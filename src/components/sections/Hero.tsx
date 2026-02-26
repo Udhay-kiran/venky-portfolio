@@ -13,7 +13,7 @@ const roles = [
 const CONTACT_EMAIL = "udhaykiran.7894@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/venkat-pabbathi-822857209/";
 const GITHUB_URL = "https://github.com/Udhay-kiran";
-const CV_PATH = "#";
+const CV_PATH = "/Venkat_Pabbathi%20CV.pdf";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -94,9 +94,9 @@ export default function Hero() {
 
   return (
     <>
-      <section id="top" className="py-6 md:py-8">
+      <section id="top" className="pt-6 pb-0 md:pt-8 md:pb-0">
         <div className="flex items-start justify-center">
-          <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center space-y-8 py-8 md:py-10 text-center">
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center space-y-8 pt-8 pb-2 md:pt-10 md:pb-2 text-center">
             <h1
               className="text-4xl font-bold tracking-tight text-zinc-50 md:text-6xl lg:text-7xl"
               data-reveal="up"
@@ -258,7 +258,7 @@ export default function Hero() {
                 <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
                   Email
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/60 text-teal-300/80 transition hover:border-teal-500/60 hover:text-teal-200"
@@ -268,7 +268,7 @@ export default function Hero() {
                   </a>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className="min-w-0 flex-1 rounded-lg border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none transition hover:border-teal-500/60 hover:text-teal-200"
+                    className="min-w-0 flex-1 break-all rounded-lg border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none transition hover:border-teal-500/60 hover:text-teal-200"
                     aria-label="Email address"
                     title={CONTACT_EMAIL}
                   >
@@ -312,6 +312,3 @@ export default function Hero() {
     </>
   );
 }
-
-
-

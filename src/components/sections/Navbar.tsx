@@ -13,7 +13,7 @@ const sectionIds = ["about", "work", "experience", "skills", "education"] as con
 
 const GITHUB_URL = "https://github.com/Udhay-kiran";
 const LINKEDIN_URL = "https://www.linkedin.com/in/venkat-pabbathi-822857209/";
-const CV_PATH = "/cv.pdf";
+const CV_PATH = "/Venkat_Pabbathi%20CV.pdf";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

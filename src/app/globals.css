@@ -249,7 +249,7 @@ section[id] {
   opacity: 1;
 }
 
-/* === Skills chips: stable styling (no Tailwind dependency issues) === */
+/* Keep skill-chip layout in plain CSS so it stays stable across Tailwind build changes. */
 .skill-chip-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
