@@ -2,12 +2,13 @@
 
 import type { ReactNode } from "react";
 import { Icon } from "@/components/ui/Icon";
-import { ExternalLink, Github, Linkedin, Mail } from "@/lib/icons";
+import { Github, Linkedin, Mail } from "@/lib/icons";
 
 const quickLinks = [
   { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#work" },
   { label: "Experience", href: "#experience" },
+  { label: "Technical Expertise", href: "#skills" },
   { label: "Education", href: "#education" },
 ];
 
@@ -55,16 +56,9 @@ export default function Footer() {
             Venkat Pabbathi
           </h3>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-zinc-400">
-            Building calm, responsive interfaces with a focus on clarity,
-            usability, and maintainable frontend systems.
+            Building responsive web applications with clarity, usability, and
+            long-term maintainability in mind.
           </p>
-          <a
-            href="#"
-            className="mt-4 inline-flex items-center gap-2 text-sm text-teal-200/90 transition hover:text-teal-100"
-          >
-            <Icon icon={ExternalLink} size={16} className="text-teal-200/90" />
-            External Profile
-          </a>
         </div>
 
         <div data-reveal="up" data-reveal-delay="60">
@@ -94,17 +88,14 @@ export default function Footer() {
             Connect
           </p>
           <div className="mt-4 flex items-center gap-2">
-            <IconLink href="#" label="GitHub">
+            <IconLink href="https://github.com/Udhay-kiran" label="GitHub">
               <Icon icon={Github} size={16} className="text-current" />
             </IconLink>
-            <IconLink href="#" label="LinkedIn">
+            <IconLink href="https://www.linkedin.com/in/venkat-pabbathi-822857209/" label="LinkedIn">
               <Icon icon={Linkedin} size={16} className="text-current" />
             </IconLink>
-            <IconLink href="mailto:your.email@example.com" label="Email">
+            <IconLink href="mailto:udhaykiran.7894@gmail.com" label="Email">
               <Icon icon={Mail} size={16} className="text-current" />
-            </IconLink>
-            <IconLink href="#" label="External Link">
-              <Icon icon={ExternalLink} size={16} className="text-current" />
             </IconLink>
           </div>
         </div>

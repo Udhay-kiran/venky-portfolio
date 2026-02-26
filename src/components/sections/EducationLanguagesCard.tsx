@@ -35,7 +35,7 @@ export default function EducationLanguagesCard() {
     >
       <aside className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
         <div className="flex items-center gap-3 text-zinc-50">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-teal-300/20 bg-teal-300/5 text-teal-400">
+          <span className="icon-chip inline-flex h-9 w-9 items-center justify-center rounded-xl border border-teal-300/20 bg-teal-300/5 text-teal-400">
             <Icon icon={Languages} size={27} className="text-teal-400" />
           </span>
           <h3 className="text-lg font-semibold tracking-tight">Languages</h3>

@@ -5,15 +5,14 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const roles = [
-  "Full-Stack Developer (UI/UX focus)",
-  "UI/UX Engineer",
-  "Frontend Developer",
-  "Software Developer",
+  "UX-oriented developer",
+  "Full-stack engineer",
+  "Software developer",
 ];
 
-const CONTACT_EMAIL = "your.email@example.com";
-const LINKEDIN_URL = "#";
-const GITHUB_URL = "#";
+const CONTACT_EMAIL = "udhaykiran.7894@gmail.com";
+const LINKEDIN_URL = "https://www.linkedin.com/in/venkat-pabbathi-822857209/";
+const GITHUB_URL = "https://github.com/Udhay-kiran";
 const CV_PATH = "#";
 
 export default function Hero() {
@@ -95,9 +94,9 @@ export default function Hero() {
 
   return (
     <>
-      <section id="top" className="min-h-[calc(100vh-72px)]">
-        <div className="flex min-h-[calc(100vh-72px)] items-center justify-center">
-          <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center space-y-8 py-12 text-center">
+      <section id="top" className="py-6 md:py-8">
+        <div className="flex items-start justify-center">
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center space-y-8 py-8 md:py-10 text-center">
             <h1
               className="text-4xl font-bold tracking-tight text-zinc-50 md:text-6xl lg:text-7xl"
               data-reveal="up"
@@ -144,11 +143,11 @@ export default function Hero() {
               data-reveal="up"
               style={{ transitionDelay: "180ms" }}
             >
-              I like turning ideas into clean, responsive interfaces — and improving UX through research and iteration.
+              Full-stack developer building clean, scalable web applications with a strong UX focus
             </p>
 
             <p
-              className="mt-4 text-center text-sm tracking-wide text-zinc-500 opacity-80"
+              className="mt-4 text-center text-sm tracking-wide text-zinc-400 opacity-80"
               data-reveal="up"
               style={{ transitionDelay: "250ms" }}
             >
@@ -188,7 +187,7 @@ export default function Hero() {
             >
               <a
                 href={CV_PATH}
-                className="text-sm text-zinc-500 transition hover:text-white"
+                className="text-sm text-zinc-400 transition hover:text-white"
               >
                 Download CV (PDF)
               </a>
@@ -202,7 +201,7 @@ export default function Hero() {
                 }}
                 className="mt-6 flex flex-col items-center justify-center opacity-60 transition hover:opacity-100"
               >
-                <span className="text-xs tracking-[0.16em] text-zinc-500">
+                <span className="text-xs tracking-[0.16em] text-zinc-400">
                   Scroll for more
                 </span>
                 <span className="mt-2 text-2xl text-zinc-400 motion-reduce:animate-none animate-floatSlow">
@@ -260,17 +259,21 @@ export default function Hero() {
                   Email
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/60 text-teal-300/80">
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/60 text-teal-300/80 transition hover:border-teal-500/60 hover:text-teal-200"
+                    aria-label="Send email"
+                  >
                     <AppIcon name="mail" size={16} className="text-current" />
-                  </span>
-                  <input
-                    type="text"
-                    readOnly
-                    value={CONTACT_EMAIL}
-                    onFocus={(event) => event.currentTarget.select()}
-                    className="min-w-0 flex-1 rounded-lg border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none ring-0 selection:bg-teal-400/30"
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="min-w-0 flex-1 rounded-lg border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none transition hover:border-teal-500/60 hover:text-teal-200"
                     aria-label="Email address"
-                  />
+                    title={CONTACT_EMAIL}
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
                   <button
                     type="button"
                     onClick={handleCopyEmail}
@@ -285,6 +288,8 @@ export default function Hero() {
               <div className="grid gap-2 sm:grid-cols-2">
                 <a
                   href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/40 px-4 py-2.5 font-medium text-zinc-100 transition hover:border-teal-500/60 hover:text-teal-200"
                 >
                   <AppIcon name="linkedin" size={16} className="text-current" />
@@ -292,6 +297,8 @@ export default function Hero() {
                 </a>
                 <a
                   href={GITHUB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900/40 px-4 py-2.5 font-medium text-zinc-100 transition hover:border-teal-500/60 hover:text-teal-200"
                 >
                   <AppIcon name="github" size={16} className="text-current" />
@@ -305,7 +312,6 @@ export default function Hero() {
     </>
   );
 }
-
 
 
 

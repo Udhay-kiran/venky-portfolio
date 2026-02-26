@@ -1,123 +1,152 @@
-import { Icon } from "@/components/ui/Icon";
-import type { LucideIcon } from "@/lib/icons";
 import {
-  Accessibility,
-  Atom,
-  BookOpen,
-  Braces,
-  Database,
-  GitBranch,
-  Globe,
-  Layers,
-  Monitor,
-  PanelTop,
-  PenTool,
-  Route,
-  Search,
+  Code2,
   Server,
-  ShieldCheck,
-  Sparkles,
-  SquareCode,
-  TestTube,
-  Wind,
-  Workflow,
+  Cloud,
+  PenTool,
+  Cpu,
+  ChevronDown,
   Wrench,
-} from "@/lib/icons";
+} from "lucide-react";
+import { Icon } from "@/components/ui/Icon";
 import SectionHeading from "../SectionHeading";
-import SectionReveal from "../SectionReveal";
 
-type SkillIconComponent = LucideIcon;
+const skillCards = [
+  {
+    title: "Frontend",
+    icon: Code2,
+    proof: "Clean, responsive UI with reusable components.",
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "HTML/CSS",
+      "Responsive UI",
+      "Component Patterns",
+      "Accessibility",
+      "Design Systems",
+    ],
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    proof: "APIs, auth, and data flows when needed.",
+    items: [
+      "Node.js",
+      "REST APIs",
+      "Auth & Sessions",
+      "MongoDB",
+      "MySQL",
+      "Python (scripting)",
+    ],
+  },
+  {
+    title: "Deployment & Systems",
+    icon: Cloud,
+    proof: "Ship + maintain with simple, reliable tooling.",
+    items: ["AWS (S3, EC2)", "Vercel", "Render", "Linux CLI", "Git & GitHub"],
+  },
+  {
+    title: "UX & Interaction",
+    icon: PenTool,
+    proof: "Prototype → feedback → iteration on interaction details.",
+    items: [
+      "Figma",
+      "UX Research",
+      "Personas",
+      "Usability Testing",
+      "Interaction Flows",
+    ],
+  },
+];
 
-const skillIconMap: Record<string, SkillIconComponent> = {
-  "Next.js": PanelTop,
-  React: Atom,
-  TypeScript: Braces,
-  JavaScript: SquareCode,
-  "Tailwind CSS": Wind,
-  Accessibility,
-  "Design Systems": Layers,
-  "Node.js": Server,
-  Express: Route,
-  "REST APIs": Globe,
-  MongoDB: Database,
-  PostgreSQL: Database,
-  "Auth & Sessions": ShieldCheck,
-  "Git & GitHub": GitBranch,
-  Figma: PenTool,
-  "Jest/Testing": TestTube,
-  Storybook: BookOpen,
-  "CI/CD": Workflow,
-  "UX Research": Search,
+const embeddedItems = [
+  "C/C++ (Arduino)",
+  "Sensor Integration (MPU-6050, L3G4200D)",
+  "Real-Time Data Acquisition",
+  "Signal Threshold Processing",
+  "Serial Data Logging",
+];
+
+type SkillChipProps = {
+  label: string;
+  small?: boolean;
 };
 
-type SkillGroup = {
-  title: string;
-  icon: SkillIconComponent;
-  items: string[];
-};
-
-const skillGroups: SkillGroup[] = [
-    {
-      title: "Frontend",
-      icon: Monitor,
-      items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Accessibility", "Design Systems"],
-    },
-    {
-      title: "Backend",
-      icon: Server,
-      items: ["Node.js", "Express", "REST APIs", "MongoDB", "PostgreSQL", "Auth & Sessions"],
-    },
-    {
-      title: "Tools & UX",
-      icon: Sparkles,
-      items: ["Git & GitHub", "Figma", "Jest/Testing", "Storybook", "CI/CD", "UX Research"],
-    },
-  ];
+function SkillChip({ label, small = false }: SkillChipProps) {
+  return (
+    <span className={small ? "skill-chip skill-chip--sm skills-chip" : "skill-chip skills-chip"}>
+      {label}
+    </span>
+  );
+}
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16">
-      <SectionReveal>
-        <div className="flex flex-col gap-3">
-          <SectionHeading
-            title="Skills"
-            icon={<Icon icon={Wrench} size={28} className="text-teal-400 md:h-[30px] md:w-[30px]" />}
-          />
-        </div>
+    <section id="skills" className="skills-section py-16" data-reveal="up">
+      <div className="flex flex-col gap-3" data-reveal="up">
+        <SectionHeading
+          title="Technical Expertise"
+          icon={
+            <Icon
+              icon={Wrench}
+              size={28}
+              className="text-teal-400 md:h-[30px] md:w-[30px]"
+            />
+          }
+        />
+      </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {skillGroups.map((group) => (
-            <article
-              key={group.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_14px_40px_-28px_rgba(0,0,0,0.6)]"
+      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {skillCards.map((card) => {
+          const Icon = card.icon;
+          return (
+            <div
+              key={card.title}
+              className="flex h-full flex-col rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 shadow-sm"
               data-reveal="up"
             >
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-teal-300/20 bg-teal-300/5 text-teal-200">
-                  <Icon icon={group.icon} size={18} className="text-teal-300/90" />
+                <span className="icon-chip grid h-10 w-10 place-items-center rounded-xl border border-zinc-800 bg-zinc-900/60">
+                  <Icon className="h-5 w-5 text-teal-300/80" />
                 </span>
-                <h3 className="text-lg font-semibold text-zinc-100">{group.title}</h3>
+                <h3 className="text-lg font-semibold text-zinc-50">{card.title}</h3>
               </div>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {group.items.map((item) => {
-                  const ItemIcon = skillIconMap[item] ?? Sparkles;
-                  return (
-                    <span
-                      key={item}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3.5 py-1.5 text-sm font-medium text-zinc-200/95"
-                    >
-                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-md border border-teal-300/15 bg-teal-300/5 text-teal-200/90">
-                        <Icon icon={ItemIcon} size={18} className="text-teal-300/90" />
-                      </span>
-                      <span>{item}</span>
-                    </span>
-                  );
-                })}
+
+              <div className="mt-4 skill-chip-grid">
+                {card.items.map((item) => (
+                  <SkillChip key={item} label={item} />
+                ))}
               </div>
-            </article>
-          ))}
-        </div>
-      </SectionReveal>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Collapsed extra category */}
+      <div className="mt-6" data-reveal="up">
+        <details className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-5">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="icon-chip grid h-10 w-10 place-items-center rounded-xl border border-zinc-800 bg-zinc-900/60">
+                <Cpu className="h-5 w-5 text-teal-300/80" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-zinc-50">
+                  Embedded & Real-Time Systems
+                </p>
+              </div>
+            </div>
+
+            <ChevronDown className="h-5 w-5 text-zinc-400 transition-transform duration-300 group-open:rotate-180" />
+          </summary>
+
+          <div className="mt-4 skill-chip-grid">
+            {embeddedItems.map((item) => (
+              <SkillChip key={item} label={item} small />
+            ))}
+          </div>
+        </details>
+      </div>
     </section>
   );
 }

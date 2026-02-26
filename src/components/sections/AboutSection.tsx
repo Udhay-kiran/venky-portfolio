@@ -12,23 +12,23 @@ type Highlight = {
 
 const highlights: Highlight[] = [
   {
-    title: "Frontend-first mindset",
-    description: "I enjoy turning rough ideas into clear, responsive interfaces.",
+    title: "Full-Stack Web Development",
+    description: "Building production-ready web applications using React, Next.js, Node.js, and MongoDB — from UI to database.",
     icon: Code2,
   },
   {
-    title: "Iteration over guesswork",
-    description: "I prototype, collect feedback, then refine the small details.",
+    title: "Clean & Scalable Architecture",
+    description: "Designing structured APIs, modular components, and maintainable codebases that scale as products grow.",
     icon: LayoutGrid,
   },
   {
-    title: "Comfortable full-stack",
-    description: "I can handle APIs, auth, and data flows when the project needs it.",
+    title: "UX-Driven Implementation",
+    description: "Translate research, interaction flows, and design systems into responsive, accessible interfaces.",
     icon: Layers,
   },
   {
-    title: "Clean implementation",
-    description: "I care about naming, structure, and maintainable UI patterns.",
+    title: "Deployment & Production Experience",
+    description: "Deploying and maintaining applications using AWS, Vercel, and cloud services with authentication and secure APIs.",
     icon: Wrench,
   },
 ];
@@ -49,8 +49,7 @@ export default function AboutSection() {
         />
         <p className="mt-4 max-w-4xl leading-relaxed text-zinc-300 md:text-[1.02rem] md:leading-8">
           I&apos;m Venkat, an MSc Mathematics &amp; Computer Science student at
-          Saarland University. I enjoy building responsive products, polishing
-          interaction details, and improving UX with research-driven iteration.
+          Saarland University. I build responsive, production-ready web applications with a focus on clarity, performance, and user experience.
         </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -64,7 +63,7 @@ export default function AboutSection() {
                 data-reveal-delay={80 + index * 60}
               >
                 <div className="flex items-start gap-3">
-                  <span className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-teal-300/20 bg-teal-300/5 text-teal-200">
+                  <span className="icon-chip mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-teal-300/20 bg-teal-300/5 text-teal-200">
                     <Icon icon={Glyph} size={18} strokeWidth={2} className="text-teal-300/90" />
                   </span>
                   <div>
