@@ -13,7 +13,8 @@ const sectionIds = ["about", "work", "experience", "skills", "education"] as con
 
 const GITHUB_URL = "https://github.com/Udhay-kiran";
 const LINKEDIN_URL = "https://www.linkedin.com/in/venkat-pabbathi-822857209/";
-const CV_PATH = "/Venkat_Pabbathi%20CV.pdf";
+const CV_EN_PATH = "/Venkat_Pabbathi_CV_EN.pdf";
+const CV_DE_PATH = "/Venkat_Pabbathi_CV_DE.pdf";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -119,14 +120,35 @@ export default function Navbar() {
             >
               LinkedIn
             </a>
-            <a
-              href={CV_PATH}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-zinc-800 px-3 py-1.5 text-zinc-200 transition hover:border-teal-500 hover:text-teal-200"
-            >
-              CV
-            </a>
+            <div className="group relative">
+              <button
+                type="button"
+                aria-haspopup="menu"
+                className="rounded-lg border border-zinc-800 px-3 py-1.5 text-zinc-200 transition hover:border-teal-500 hover:text-teal-200 focus:border-teal-500 focus:text-teal-200 focus:outline-none"
+              >
+                CV
+              </button>
+              <div className="pointer-events-none absolute right-0 top-full z-40 min-w-[9rem] pt-2 opacity-0 transition duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                <div className="translate-y-1 rounded-xl border border-zinc-800 bg-zinc-950/95 p-1 shadow-xl transition duration-150 group-hover:translate-y-0 group-focus-within:translate-y-0">
+                  <a
+                    href={CV_EN_PATH}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-200 transition hover:bg-zinc-900 hover:text-teal-200"
+                  >
+                    English
+                  </a>
+                  <a
+                    href={CV_DE_PATH}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-200 transition hover:bg-zinc-900 hover:text-teal-200"
+                  >
+                    German
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <button
             type="button"
@@ -175,12 +197,20 @@ export default function Navbar() {
                 LinkedIn
               </a>
               <a
-                href={CV_PATH}
+                href={CV_EN_PATH}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="transition hover:text-teal-300"
               >
-                CV
+                CV English
+              </a>
+              <a
+                href={CV_DE_PATH}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-teal-300"
+              >
+                CV German
               </a>
             </div>
           </div>

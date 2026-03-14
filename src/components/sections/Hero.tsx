@@ -13,7 +13,7 @@ const roles = [
 const CONTACT_EMAIL = "udhaykiran.7894@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/venkat-pabbathi-822857209/";
 const GITHUB_URL = "https://github.com/Udhay-kiran";
-const CV_PATH = "/Venkat_Pabbathi%20CV.pdf";
+const CV_PATH = "/Venkat_Pabbathi_CV_EN.pdf";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -185,12 +185,27 @@ export default function Hero() {
               data-reveal="up"
               style={{ transitionDelay: "410ms" }}
             >
-              <a
-                href={CV_PATH}
-                className="text-sm text-zinc-400 transition hover:text-white"
-              >
-                Download CV (PDF)
-              </a>
+              <p className="text-sm text-zinc-400">
+                Download CV (
+                <a
+                  href={CV_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
+                  English
+                </a>
+                /
+                <a
+                  href="/Venkat_Pabbathi_CV_DE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
+                  Deutsch
+                </a>
+                )
+              </p>
 
               <a
                 href="#about"
