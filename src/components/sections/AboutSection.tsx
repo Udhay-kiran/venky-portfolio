@@ -13,22 +13,26 @@ type Highlight = {
 const highlights: Highlight[] = [
   {
     title: "Full-Stack Web Development",
-    description: "Building production-ready web applications using React, Next.js, Node.js, and MongoDB — from UI to database.",
+    description:
+      "Building web applications using React, Next.js, Node.js, and MongoDB to turn product ideas into working tools across the frontend and backend.",
     icon: Code2,
   },
   {
     title: "Clean & Scalable Architecture",
-    description: "Designing structured APIs, modular components, and maintainable codebases that scale as products grow.",
+    description:
+      "Designing structured APIs, modular components, and maintainable codebases to keep products easier to extend and support.",
     icon: LayoutGrid,
   },
   {
     title: "UX-Driven Implementation",
-    description: "Translate research, interaction flows, and design systems into responsive, accessible interfaces.",
+    description:
+      "Translating research, interaction flows, and design systems into responsive interfaces to support clearer and more usable product experiences.",
     icon: Layers,
   },
   {
     title: "Deployment & Production Experience",
-    description: "Deploying and maintaining applications using AWS, Vercel, and cloud services with authentication and secure APIs.",
+    description:
+      "Deploying and maintaining applications using AWS, Vercel, and secure API workflows to support reliable day-to-day usage.",
     icon: Wrench,
   },
 ];
@@ -48,8 +52,11 @@ export default function AboutSection() {
           }
         />
         <p className="mt-4 max-w-4xl leading-relaxed text-zinc-300 md:text-[1.02rem] md:leading-8">
-          I&apos;m Venkat, an MSc Mathematics &amp; Computer Science student at
-          Saarland University. I build responsive, production-ready web applications with a focus on clarity, performance, and user experience.
+          I&apos;m Venkat, a Full-Stack Developer and UI/UX Designer currently
+          studying Computer Science at Saarland University. I build web
+          applications using React, Next.js, Node.js, MongoDB, and REST APIs to
+          create responsive interfaces and practical digital tools with a strong
+          focus on usability.
         </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">

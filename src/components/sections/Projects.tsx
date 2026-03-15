@@ -11,6 +11,7 @@ type ProjectLinks = {
   github?: string;
   figma?: string;
   report?: string;
+  caseStudy?: string;
 };
 
 type Project = {
@@ -35,6 +36,45 @@ function TagList({ tags }: { tags: string[] }) {
           {tag}
         </span>
       ))}
+    </div>
+  );
+}
+
+const actionButtonClass =
+  "inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-teal-400/40 hover:text-teal-200 hover:shadow-[0_0_24px_-16px_rgba(45,212,191,0.65)] focus-visible:border-teal-400/40 focus-visible:text-teal-200 focus-visible:outline-none";
+
+function ProjectActions({ project }: { project: Project }) {
+  const liveHref = project.links.live || project.links.figma;
+
+  return (
+    <div className="flex flex-wrap gap-3">
+      {liveHref ? (
+        <a
+          href={liveHref}
+          target="_blank"
+          rel="noreferrer"
+          className={actionButtonClass}
+        >
+          Live Demo
+        </a>
+      ) : null}
+
+      {project.links.github ? (
+        <a
+          href={project.links.github}
+          target="_blank"
+          rel="noreferrer"
+          className={actionButtonClass}
+        >
+          GitHub
+        </a>
+      ) : null}
+
+      {project.links.caseStudy ? (
+        <Link href={project.links.caseStudy} className={actionButtonClass}>
+          View Case Study &rarr;
+        </Link>
+      ) : null}
     </div>
   );
 }
@@ -114,7 +154,7 @@ function ProjectThumb({
 
 function SpotlightCard({ project }: { project: Project }) {
   return (
-    <article className="group glaze-hover-diagonal grid gap-6 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-lg transition hover:-translate-y-1 hover:border-teal-500/60 hover:shadow-teal-500/10 md:grid-cols-2 md:items-center">
+    <article className="group glaze-hover-diagonal grid cursor-pointer gap-6 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-lg transition hover:-translate-y-1 hover:border-teal-500/60 hover:bg-zinc-900/80 hover:shadow-teal-500/10 focus-within:border-teal-500/60 focus-within:bg-zinc-900/80 focus-within:shadow-teal-500/10 md:grid-cols-2 md:items-center">
       <ProjectThumb
         src={project.thumbnail}
         alt={`${project.title} screenshot`}
@@ -133,6 +173,7 @@ function SpotlightCard({ project }: { project: Project }) {
             </p>
           ) : null}
         </div>
+        <ProjectActions project={project} />
         <TagList tags={project.tags} />
       </div>
     </article>
@@ -141,7 +182,7 @@ function SpotlightCard({ project }: { project: Project }) {
 
 function SmallCard({ project }: { project: Project }) {
   return (
-    <article className="group glaze-hover-diagonal flex h-full flex-col gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 shadow-lg transition hover:-translate-y-1 hover:border-teal-500/60 hover:shadow-teal-500/10">
+    <article className="group glaze-hover-diagonal flex h-full cursor-pointer flex-col gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 shadow-lg transition hover:-translate-y-1 hover:border-teal-500/60 hover:bg-zinc-900/80 hover:shadow-teal-500/10 focus-within:border-teal-500/60 focus-within:bg-zinc-900/80 focus-within:shadow-teal-500/10">
       <ProjectThumb
         src={project.thumbnail}
         alt={`${project.title} screenshot`}
@@ -158,6 +199,7 @@ function SmallCard({ project }: { project: Project }) {
             {project.impact}
           </p>
         ) : null}
+        <ProjectActions project={project} />
         <TagList tags={project.tags} />
       </div>
     </article>

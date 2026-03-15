@@ -12,11 +12,11 @@ export default function Experience() {
       dates: "08/2022 \u2014 03/2023",
       location: "Bengaluru, India",
       bullets: [
-        "Designed and implemented full-stack features using React.js, Node.js, MongoDB, and MySQL.",
-        "Built reusable UI components and internal dashboards for structured media data workflows.",
-        "Developed and integrated REST APIs for media asset management and content delivery.",
-        "Worked with AWS services (S3, EC2) for deployment and cloud-based storage.",
-        "Debugged and maintained production systems to ensure reliability and performance.",
+        "Developed full-stack product features using React.js, Node.js, MongoDB, and MySQL to support internal media content workflows.",
+        "Built reusable React dashboard components for internal tools to help teams monitor and manage media assets more clearly.",
+        "Implemented REST APIs in Node.js for media asset retrieval and workflow actions to enable structured integration across internal systems.",
+        "Integrated AWS services such as S3 and EC2 into media management tools to support cloud-based storage and deployment.",
+        "Debugged and maintained production applications across the stack to improve reliability and keep internal platforms running smoothly.",
       ],
     },
     {
@@ -25,10 +25,11 @@ export default function Experience() {
       dates: "12/2021 \u2014 05/2022",
       location: "Pune, India",
       bullets: [
-        "Contributed to full-stack web application development using React, Node.js, Python, MongoDB, and MySQL.",
-        "Implemented frontend components and backend endpoints for feature enhancements and bug resolution.",
-        "Worked with structured data models and supported API integration and testing.",
-        "Assisted in debugging, refactoring, and improving application performance under senior mentorship.",
+        "Contributed to full-stack web application features using React, Node.js, Python, MongoDB, and MySQL to support scalable product functionality.",
+        "Built responsive frontend components in React to improve usability and consistency across the application interface.",
+        "Implemented backend endpoints and database interactions using Node.js, Python, MongoDB, and MySQL to enable reliable communication between frontend and server systems.",
+        "Worked with REST APIs and structured data models to support feature integration and application workflows.",
+        "Collaborated with senior engineers in an Agile development environment to improve code quality and application maintainability.",
       ],
     },
   ];

@@ -13,9 +13,7 @@ export default function Education() {
       location: "Saarbr\u00fccken, Germany",
       dates: "04/2023 \u2013 Present",
       bullets: [
-        "Coursework spanning interactive systems, human\u2013computer interaction, and applied software development.",
-        "Strong emphasis on implementation through project-based work and system design.",
-        "Focus areas: Human-Computer Interaction, Interactive Systems, and Data-Driven Systems",
+        "Focus areas include Human-Computer Interaction, Interactive Systems, and Full-Stack Development.",
       ],
       finalProject: null,
     },
@@ -25,14 +23,13 @@ export default function Education() {
       location: "Bengaluru, India",
       dates: "08/2019 \u2013 07/2022",
       bullets: [
-        "Broad foundation across programming, math, and core electronics.",
-        "Coursework included data structures/programming + applied electronics fundamentals.",
-        "Final-year project: Clinic Management Website (web app + UI-focused implementation).",
+        "Built a strong foundation in programming, mathematics, and core electronics.",
+        "Studied data structures, algorithms, database systems, and object-oriented programming.",
       ],
       finalProject: {
         title: "Final-Year Project: Clinic Management System",
         description:
-          "Web-based clinic management system for appointment scheduling and patient record tracking. Designed database schema, implemented CRUD workflows, and built responsive UI for administrative operations.",
+          "Web-based clinic management system built using PHP and MySQL to support appointment scheduling and patient record management for clinic administrators.",
         href: "https://drive.google.com/file/d/1cwg1truemlBGttf1z5XZ8ObLAAh5hlgE/view?usp=sharing",
       },
     },

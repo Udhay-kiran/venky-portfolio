@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const roles = [
-  "UX-oriented developer",
-  "Full-stack engineer",
+  "Full-stack developer",
+  "UI/UX designer",
   "Software developer",
 ];
 
@@ -143,7 +143,7 @@ export default function Hero() {
               data-reveal="up"
               style={{ transitionDelay: "180ms" }}
             >
-              Full-stack developer building clean, scalable web applications with a strong UX focus
+              Full-Stack Developer and UI/UX Designer building web applications with React, Next.js, Node.js, MongoDB, and REST APIs to create responsive interfaces and practical digital tools.
             </p>
 
             <p

@@ -10,6 +10,7 @@ export type Project = {
     live?: string;
     figma?: string;
     report?: string;
+    caseStudy?: string;
   };
   status?: "featured" | "academic";
 };
@@ -64,6 +65,7 @@ export const projects: Project[] = [
     tags: ["Figma", "Usability Testing", "UX Research", "Interaction Design", "Personas"],
     links: {
       figma: "https://www.figma.com/proto/VJZyW0kONOLBN3xjz25xjc/IKnow?t=vQidjR2lWxFKggql-1",
+      caseStudy: "/projects/iknow-case-study",
     },
     status: "featured",
   },

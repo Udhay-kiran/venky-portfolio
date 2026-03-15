@@ -297,6 +297,15 @@ section[id] {
   line-height: 1.15;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @layer components {
   .skills-section .skills-chip {
     @apply relative rounded-full border border-white/10 bg-white/5;
