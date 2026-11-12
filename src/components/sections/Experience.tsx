@@ -7,8 +7,32 @@ import SectionReveal from "../SectionReveal";
 export default function Experience() {
   const experiences = [
     {
+      company: "August-Wilhelm Scheer Institut \u2013 Smart Energy Lab",
+      title: "Junior Researcher (Werkstudent), UI/UX Design",
+      dates: "07/2026 \u2014 Present",
+      location: "Saarbr\u00fccken, Germany",
+      bullets: [
+        "Created and iteratively refined Figma wireframes and prototypes for AutoMap.AI, an AI-based data-mapping tool (5-step flow, dashboard, format library).",
+        "Bridged interface and backend: reviewed backend code and tested the running app to learn what the backend can deliver, shaping confidence levels, review/retry flows and error states.",
+        "Built and documented a design system (components, type scale, spacing), applied WCAG accessibility guidelines, and adjusted layouts after frontend feedback; parts are implemented by developers.",
+        "Turning requirements and mapped data flows into role-specific dashboards for EnOptI, an energy-optimisation research project.",
+      ],
+    },
+    {
+      company: "Fraunhofer IPA",
+      title: "Master\u2019s Thesis (external) \u2013 Working title: Interface Design for Pairwise Comparison in a Multi-Criteria Decision-Support Tool",
+      dates: "07/2026 \u2014 Present",
+      location: "Stuttgart, Germany",
+      bullets: [
+        "Designing and developing a web-based interface to replace an Excel-based workflow in a multi-criteria decision-support tool.",
+        "Analysed the existing Excel/Python pipeline (utility curves, AHP pairwise-comparison weighting, Monte Carlo simulation) to define requirements for the interface.",
+        "Planning and conducting requirements interviews and think-aloud usability evaluation with Fraunhofer researchers.",
+        "Designing a controlled user study comparing three ways of displaying value information during pairwise comparison.",
+      ],
+    },
+    {
       company: "Amagi Media Labs",
-      title: "Full Stack Developer",
+      title: "Full-Stack Developer",
       dates: "08/2022 \u2014 03/2023",
       location: "Bengaluru, India",
       bullets: [

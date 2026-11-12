@@ -8,12 +8,12 @@ import SectionReveal from "../SectionReveal";
 export default function Education() {
   const educationItems = [
     {
-      degree: "Master of Science \u2013 Computer Science",
+      degree: "Master of Science \u2013 Mathematics and Computer Science",
       university: "Saarland University",
       location: "Saarbr\u00fccken, Germany",
       dates: "04/2023 \u2013 Present",
       bullets: [
-        "Focus areas include Human-Computer Interaction, Interactive Systems, and Full-Stack Development.",
+        "Focus: Human-Computer Interaction, Interactive Systems, and Software Engineering (ongoing). Expected graduation: September 2027.",
       ],
       finalProject: null,
     },
