@@ -12,18 +12,32 @@ import SectionHeading from "../SectionHeading";
 
 const skillCards = [
   {
+    title: "UX & Interaction",
+    icon: PenTool,
+    proof: "Research → prototype → test → iterate.",
+    items: [
+      "Figma",
+      "User Research",
+      "Personas & Task Analysis",
+      "Wireframing & Prototyping",
+      "Interaction Design",
+      "Usability Evaluation",
+      "Design Systems",
+      "Accessibility (WCAG)",
+    ],
+  },
+  {
     title: "Frontend",
     icon: Code2,
-    proof: "Clean, responsive UI with reusable components.",
+    proof: "Responsive interfaces built from reusable components.",
     items: [
       "React",
       "Next.js",
       "TypeScript",
+      "JavaScript",
       "HTML/CSS",
       "Responsive UI",
       "Component Patterns",
-      "Accessibility",
-      "Design Systems",
     ],
   },
   {
@@ -36,26 +50,14 @@ const skillCards = [
       "Auth & Sessions",
       "MongoDB",
       "MySQL",
-      "Python (scripting)",
+      "Python",
     ],
   },
   {
-    title: "Deployment & Systems",
+    title: "Deployment & Tools",
     icon: Cloud,
-    proof: "Ship + maintain with simple, reliable tooling.",
+    proof: "Ship and maintain with simple, reliable tooling.",
     items: ["AWS (S3, EC2)", "Vercel", "Render", "Linux CLI", "Git & GitHub"],
-  },
-  {
-    title: "UX & Interaction",
-    icon: PenTool,
-    proof: "Prototype → feedback → iteration on interaction details.",
-    items: [
-      "Figma",
-      "UX Research",
-      "Personas",
-      "Usability Testing",
-      "Interaction Flows",
-    ],
   },
 ];
 

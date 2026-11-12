@@ -5,9 +5,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const roles = [
-  "Full-stack developer",
   "UI/UX designer",
-  "Software developer",
+  "Full-stack developer",
 ];
 
 const CONTACT_EMAIL = "udhaykiran.7894@gmail.com";
@@ -143,7 +142,7 @@ export default function Hero() {
               data-reveal="up"
               style={{ transitionDelay: "180ms" }}
             >
-              Full-Stack Developer and UI/UX Designer building web applications with React, Next.js, Node.js, MongoDB, and REST APIs to create responsive interfaces and practical digital tools.
+              UI/UX designer with a background in full-stack development (React, Next.js, Node.js, MongoDB). Designing from how the product actually runs: the code, the data, and the cases where it fails.
             </p>
 
             <p
@@ -186,25 +185,14 @@ export default function Hero() {
               style={{ transitionDelay: "410ms" }}
             >
               <p className="text-sm text-zinc-400">
-                Download CV (
                 <a
                   href={CV_PATH}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition hover:text-white"
                 >
-                  English
+                  Download CV
                 </a>
-                /
-                <a
-                  href="/Venkat_Pabbathi_CV_DE.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition hover:text-white"
-                >
-                  Deutsch
-                </a>
-                )
               </p>
 
               <a

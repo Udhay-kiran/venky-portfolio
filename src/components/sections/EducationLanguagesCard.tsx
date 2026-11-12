@@ -14,7 +14,7 @@ const LEVEL_TO_PERCENT: Record<string, number> = {
 };
 
 const languages = [
-  { name: "English", level: "C1" },
+  { name: "English", level: "C2" },
   { name: "German", level: "B1" },
   { name: "Hindi", level: "C2" },
   { name: "Telugu", level: "C2" },
